@@ -1,0 +1,35 @@
+{
+  "name": "Spit my mind",
+  "description": "******",
+  "version": "0.1.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": {
+      "16": "/images/icon-16.png",
+      "32": "/images/icon-32.png",
+      "48": "/images/icon-48.png",
+      "128": "/images/icon-128.png"
+    },
+    "default_popup": "html/popup.html"
+  },
+  "background": {
+    "scripts": [
+      "js/pusher-with-encryption.min.js",
+      "js/background.js"
+    ],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' https://stats.pusher.com https://js.pusher.com; object-src 'self'",
+  "permissions": [
+      "tabs",
+      "background",
+      "http://*/*",
+      "https://*/*",
+      "storage"
+  ],
+  "content_scripts": [{
+      "matches": ["https://meet.google.com/*" ],
+      "css": ["css/content.css"],
+      "js": ["js/anime.min.js", "js/contentScript.js"]
+  }]
+}
