@@ -11,7 +11,7 @@ const pusherAppCluster = "";
 const pusherEventName = "";
 ```
 
-3. ```/js/popup.js```に[shout-to-google-meet-sample-backend](https://github.com/clipnote/shout-to-google-meet-sample-backend)をデプロイしたアプリケーションにアクセスできるURLを設定
+3. ```/js/popup.js```に[shout-to-google-meet-sample-backend](https://github.com/clipnote/shout-to-google-meet-sample-backend)をデプロイしたアプリケーションにアクセスできるURLを設定する
 
 ```
 const apiUrl = "";
